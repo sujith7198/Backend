@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uploaded Images</title>
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px; 
+    }
+
+    div {
+      margin: 10px;
+    }
+
+    img {
+      width: 300px; 
+      height: 200px; 
+      object-fit: cover; 
+      border: 1px solid #ddd;
+      border-radius: 8px; 
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Uploaded Images</h1>
+  <% images.forEach((image) => { %>
+    <div>
+      <img src="/<%= image.uploadfiles %>" alt="<%= image.uploadfiles %>">
+    </div>
+  <% }); %>
+</body>
+</html>
